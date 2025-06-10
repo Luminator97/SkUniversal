@@ -8,7 +8,7 @@ import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.util.Kleenean;
-import me.ryanhamshire.GriefPrevention.Claim;
+import me.ryanhamshire.griefprevention.Claim;
 import org.bukkit.event.Event;
 
 import javax.annotation.Nullable;

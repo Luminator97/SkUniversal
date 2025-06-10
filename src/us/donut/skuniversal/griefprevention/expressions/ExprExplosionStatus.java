@@ -11,7 +11,7 @@ import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
 import ch.njol.util.coll.CollectionUtils;
-import me.ryanhamshire.GriefPrevention.Claim;
+import me.ryanhamshire.griefprevention.Claim;
 import org.bukkit.event.Event;
 
 import javax.annotation.Nullable;

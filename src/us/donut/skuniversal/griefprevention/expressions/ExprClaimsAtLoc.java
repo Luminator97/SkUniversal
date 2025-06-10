@@ -9,7 +9,7 @@ import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
-import me.ryanhamshire.GriefPrevention.Claim;
+import me.ryanhamshire.griefprevention.Claim;
 import org.bukkit.Location;
 import org.bukkit.event.Event;
 
@@ -67,11 +67,11 @@ public class ExprClaimsAtLoc extends SimpleExpression<Number> {
                 .filter(claim -> {
                     switch (claimType) {
                         case "normal":
-                            return !claim.isAdminClaim() && claim.parent == null;
+                            return !claim.isAdminClaim() && GriefPreventionHook.getParent(claim) == null;
                         case "admin":
                             return claim.isAdminClaim();
                         case "sub-claim":
-                            return claim.parent != null;
+                            return GriefPreventionHook.getParent(claim) != null;
                         default:
                             return true;
                     }
