@@ -9,7 +9,7 @@ import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
-import me.ryanhamshire.GriefPrevention.Claim;
+import me.ryanhamshire.griefprevention.Claim;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.event.Event;
@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static us.donut.skuniversal.griefprevention.GriefPreventionHook.getClaim;
+import us.donut.skuniversal.griefprevention.GriefPreventionHook;
 
 @Name("GriefPrevention - Trusted Players")
 @Description("Returns the trusted players of a claim.")
@@ -77,7 +78,7 @@ public class ExprTrustedPlayers extends SimpleExpression<OfflinePlayer> {
         managers.clear();
         Claim claim = getClaim(id.getSingle(e).longValue());
         if (claim == null) return null;
-        claim.getPermissions(builders, containers, accessors, managers);
+        GriefPreventionHook.getPermissions(claim, builders, containers, accessors, managers);
         return trustedType.stream().map(Bukkit::getOfflinePlayer).toArray(OfflinePlayer[]::new);
     }
 

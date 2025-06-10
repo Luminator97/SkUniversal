@@ -9,7 +9,7 @@ import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
-import me.ryanhamshire.GriefPrevention.Claim;
+import me.ryanhamshire.griefprevention.Claim;
 import org.bukkit.event.Event;
 
 import javax.annotation.Nullable;
@@ -55,7 +55,7 @@ public class ExprClaimType extends SimpleExpression<String> {
         Claim claim = getClaim(id.getSingle(e).longValue());
         if (claim == null) return null;
         if (claim.isAdminClaim()) return new String[]{"admin"};
-        if (claim.parent != null) return new String[]{"sub"};
+        if (GriefPreventionHook.getParent(claim) != null) return new String[]{"sub"};
         return new String[]{"basic"};
     }
 

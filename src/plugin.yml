@@ -1,8 +1,8 @@
 name: SkUniversal
-version: '2.13'
+version: '2.14'
 author: Donut
 main: us.donut.skuniversal.SkUniversal
-api-version: 1.13
+api-version: 1.20
 depend: [Skript]
 softdepend: [AdvancedBan, AdvancedSurvivalGames, Autorank, Bedwars, Bitcoin, Cannons, ClearLag, CombatLog, GriefPrevention, Lockette, LockettePro, LuckPerms, LWC, MinePacks, Parties, PlayerPoints, PlotSquared, PrisonMines, PvPLevels, Shopkeepers, ShopChest, SkyWars, Slimefun]
 commands:
